@@ -1,4 +1,4 @@
-# Miscellaneous Major League Baseball Analysis by Parker Geis
+# Major League Baseball Analysis by Parker Geis
 This repository houses the files for various projects I have created.
 
 # ERA Predictor
