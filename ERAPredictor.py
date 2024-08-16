@@ -33,25 +33,3 @@ pitcherMetrics2024 = pitcherMetrics2024[['Name', 'IDfg', 'Team', 'Age', 'ERA', '
 
 os.chdir('/Users/parkergeis/Library/CloudStorage/OneDrive-WesternGovernorsUniversity/Apps/Microsoft Power Query/Uploaded Files')
 pitcherMetrics2024.to_excel('currYearPitching.xlsx', index=False)
-
-
-# # Export to Google Sheets (for possible live Tableau refresh)
-
-# import gspread
-# import gspread_dataframe as gd
-# from oauth2client.service_account import ServiceAccountCredentials
-
-# # Use the credentials file you downloaded from Google Cloud Console
-# scope = ['https://spreadsheets.google.com/feeds',
-#          'https://www.googleapis.com/auth/drive']
-# creds = ServiceAccountCredentials.from_json_keyfile_name('/Users/parkergeis/Downloads/seismic-bucksaw-427616-e6-7082af692c88.json', scope)
-# client = gspread.authorize(creds)
-
-# # Open the Google Spreadsheet (Make sure you have edit permissions to this spreadsheet)
-# sheet = client.open('ERAPredictor').sheet1
-
-# # Clear all existing data in the sheet
-# sheet.clear()
-
-# # Assuming `sheet` is the gspread Sheet instance you've created as before
-# gd.set_with_dataframe(sheet, pitcherMetrics2024)
