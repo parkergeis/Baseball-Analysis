@@ -13,7 +13,7 @@ pd.set_option('display.max_colwidth', None)
 import datetime
 today = datetime.date.today()
 year = today.year
-pitcherMetrics = pyb.pitching_stats(start_season=2015, end_season=(year-1), ind=1, qual = 50)
+pitcherMetrics = pyb.pitching_stats(start_season=2015, end_season=(year-1), ind=1, qual = 100)
 
 pitcherStats = pitcherMetrics[['ERA', 'K%', 'BB%', 'HR/9', 'GB%', 'FB%', 'IFFB%', 'HardHit%', 'Pull%', 'Cent%', 'Oppo%']]
 X = pitcherStats.drop('ERA', axis=1)
